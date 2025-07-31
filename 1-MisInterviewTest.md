@@ -43,13 +43,28 @@
 
 ---
 ## Restful API 是什麼？這樣設計有什麼好處？
-  透過 HTTP method 的動詞，以及 CRUD action 設計的 API 規格  
-  RESTful API 會是在講基於 HTTP 通訊協定上的介面服務設計。  
-  RESTful API 會使用標準的 HTTP method 當作動詞來對資源進行操作  
-  * GET: 取得資料
-  * POST: 新增資料
-  * PUT: 修改資料
-  * DELETE: 刪除資料
+RESTful API 是基於 HTTP 通訊協定的一種介面服務設計規範，  
+它利用 HTTP 方法（動詞）來對資源（Resource）進行操作，並與 CRUD 行為對應：
+
+- **GET**：取得資料  
+- **POST**：新增資料  
+- **PUT**：修改資料  
+- **DELETE**：刪除資料  
+
+### RESTful API 特點
+
+- 使用統一且標準的 HTTP 方法  
+- URL 表示資源（名詞），如 `/users`、`/products/123`  
+- 無狀態設計（Stateless），每次請求都獨立處理  
+- 支援多種格式（如 JSON、XML）作為資料交換格式  
+
+### 好處
+
+- **簡潔明確**：利用標準 HTTP 方法清晰表達操作意圖  
+- **易於理解與使用**：開發者可快速上手與整合  
+- **擴展性好**：符合網路架構風格，方便系統擴充與維護  
+- **與瀏覽器及 HTTP 標準兼容**：利於調試與跨平台應用  
+
 
 ---
 ## 1~100找最大質數
