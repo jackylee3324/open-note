@@ -21,10 +21,23 @@
 * 你的期望待遇／預期薪資範圍是多少？」
 
 
-* 你認識的前端框架，三大框架：React、Vue、Angular
-* 物件導向程式設計(Object Oriented Programming)OOP  
+
+---
+## 你認識的前端框架，三大框架：React、Vue、Angular
+
+---
+## 物件導向程式設計(Object Oriented Programming)OOP  
   三大特性(封裝、繼承、多型)
-* Restful API 是什麼？這樣設計有什麼好處？透過 HTTP method 的動詞，以及 CRUD action 設計的 API 規格  
+
+  | 特性   | 功能簡述                    | 好處                       |
+  |--------|----------------------------|----------------------------|
+  | 封裝   | 將資料與方法包在物件內    | 資料安全，程式易維護       |
+  | 繼承   | 子類別繼承父類別成員      | 程式碼重用，結構清晰       |
+  | 多型   | 同一介面不同物件不同實現  | 彈性好，擴充性高           |
+
+---
+## Restful API 是什麼？這樣設計有什麼好處？
+  透過 HTTP method 的動詞，以及 CRUD action 設計的 API 規格  
   RESTful API 會是在講基於 HTTP 通訊協定上的介面服務設計。  
   RESTful API 會使用標準的 HTTP method 當作動詞來對資源進行操作  
   * GET: 取得資料
@@ -33,10 +46,7 @@
   * DELETE: 刪除資料
 
 ---
-
-## program
-
-### 1~100找最大質數
+## 1~100找最大質數
 - 1 到 100 的最大質數是: 97
 - 解法參考邏輯
   - 遍歷 100 到 1（反過來找，找到第一個質數就可中止）
@@ -54,8 +64,8 @@
     | 可擴展性     | 如何修改成任意區間？如何找前 N 個質數？               |
 
 
-
-### 氣泡排序法(Bubble Sort)
+---
+## 氣泡排序法(Bubble Sort)
 ```
 //氣泡排序法(Bubble Sort)
 public static void BubbleSort(int[] list)
@@ -74,8 +84,8 @@ public static void BubbleSort(int[] list)
         }
 }
 ```
-
-### JavaScript 面試題，透過 `<script>` 顯示文字
+---
+## JavaScript 面試題，透過 `<script>` 顯示文字
 
 **題目：**
 - 請說明並示範三種不同方式，使用 JavaScript 在 HTML 頁面中顯示文字「Hello, World!」。  
@@ -94,7 +104,7 @@ public static void BubbleSort(int[] list)
    p.textContent = "Hello, World!";
    document.body.appendChild(p);
   ```
-  
+
 **安全插入用戶輸入**
 ```
 const userInput = '<script>alert("XSS")</script>';
