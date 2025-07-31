@@ -36,26 +36,26 @@
 
 ## program
 
-- 1~100找最大質數
-  - 1 到 100 的最大質數是: 97
-  - 解法參考邏輯
-    - 遍歷 100 到 1（反過來找，找到第一個質數就可中止）
-    - 每個數字用 2 ~ 100 進行除法判斷是否為質數
-    - (效率更好)每個數字用 2 ~ sqrt(n) 進行除法判斷是否為質數
-    - 找到第一個符合條件的就 return / break
+### 1~100找最大質數
+- 1 到 100 的最大質數是: 97
+- 解法參考邏輯
+  - 遍歷 100 到 1（反過來找，找到第一個質數就可中止）
+  - 每個數字用 2 ~ 100 進行除法判斷是否為質數
+  - (效率更好)每個數字用 2 ~ sqrt(n) 進行除法判斷是否為質數
+  - 找到第一個符合條件的就 return / break
 
-    - 面試評估點  
+  - 面試評估點  
 
-      | 面試點       | 評估重點                                           |
-      |--------------|---------------------------------------------------|
-      | 基本語法     | for 迴圈、if 判斷、函式使用                          |
-      | 數學邏輯     | 質數定義是否理解                                    |
-      | 優化思維     | 是否懂得從 100 往下找、以及 sqrt(n) 判斷效率          |
-      | 可擴展性     | 如何修改成任意區間？如何找前 N 個質數？               |
+    | 面試點       | 評估重點                                           |
+    |--------------|---------------------------------------------------|
+    | 基本語法     | for 迴圈、if 判斷、函式使用                          |
+    | 數學邏輯     | 質數定義是否理解                                    |
+    | 優化思維     | 是否懂得從 100 往下找、以及 sqrt(n) 判斷效率          |
+    | 可擴展性     | 如何修改成任意區間？如何找前 N 個質數？               |
 
 
 
-- 氣泡排序法(Bubble Sort)
+### 氣泡排序法(Bubble Sort)
 ```
 //氣泡排序法(Bubble Sort)
 public static void BubbleSort(int[] list)
@@ -75,13 +75,32 @@ public static void BubbleSort(int[] list)
 }
 ```
 
-- script
-```
-<script>
-document.write(5 + 6);
-</script>
+### JavaScript 面試題，透過 `<script>` 顯示文字
 
-<script>
-document.getElementById("demo").innerHTML = 5 + 6;
-</script>
+**題目：**
+- 請說明並示範三種不同方式，使用 JavaScript 在 HTML 頁面中顯示文字「Hello, World!」。  
+請同時說明每種方法的差異與適用場合。
+
+**回答要點：**
+1. `document.write("Hello, World!");`  
+   - 頁面載入時直接寫入，容易覆蓋原有內容，現代開發不推薦在頁面載入後使用。
+
+2. `document.getElementById("elementId").innerHTML = "Hello, World!";`  
+   - 修改指定元素內容，適合動態更新局部內容。
+
+3. 使用 DOM API 建立並插入新節點：  
+   ```js
+   const p = document.createElement("p");
+   p.textContent = "Hello, World!";
+   document.body.appendChild(p);
+
+**安全插入用戶輸入**
+```
+const userInput = '<script>alert("XSS")</script>';
+
+// 不安全寫法，易導致 XSS
+// document.getElementById('output').innerHTML = userInput;
+
+// 安全寫法，使用 textContent 避免 HTML 被解析
+document.getElementById('output').textContent = userInput;
 ```
